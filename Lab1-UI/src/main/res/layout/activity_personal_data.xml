@@ -13,49 +13,68 @@
         tools:layout_editor_absoluteY="1dp">
 
         <EditText
-            android:id="@+id/editText"
-            android:layout_width="109dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:inputType="text"
+            android:id="@+id/editTextNombres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Ingrese sus nombres"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText3"
-            android:layout_width="109dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="116dp"
-            android:inputType="text"
+            android:id="@+id/editTextApellidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Ingrese sus apellidos"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/editTextNombres" />
+
+        <TextView
+            android:id="@+id/textViewSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexo:"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/radioButtonHombre"
+            app:layout_constraintEnd_toStartOf="@+id/radioButtonHombre"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButtonHombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="214dp" />
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:padding="16dp"
+            android:text="Hombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFechaNacimiento"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-        <EditText
-            android:id="@+id/editTextDate2"
+        <RadioButton
+            android:id="@+id/radioButtonMujer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="313dp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="276dp"
-            tools:layout_editor_absoluteY="312dp" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:padding="16dp"
+            android:text="Mujer"
+            app:layout_constraintStart_toEndOf="@+id/radioButtonHombre"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFechaNacimiento"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/button2"
@@ -63,14 +82,39 @@
             android:layout_height="wrap_content"
             android:text="Button"
             tools:layout_editor_absoluteX="278dp"
-            tools:layout_editor_absoluteY="436dp" />
+            tools:layout_editor_absoluteY="436dp"/>
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="407dp"
             android:layout_height="wrap_content"
+            android:prompt="@string/spinner_hint"
+            android:visibility="visible"
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="383dp" />
+
+        <EditText
+            android:id="@+id/editTextFechaNacimiento"
+            android:layout_width="269dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:hint="fecha de nacimiento"
+            android:inputType="date"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextApellidos" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            tools:layout_editor_absoluteX="298dp"
+            tools:layout_editor_absoluteY="205dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
