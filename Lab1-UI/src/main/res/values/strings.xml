@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Labs2002301-Gr02</string>
     <string name="spinner_hint">Grado de escolaridad</string>
+    <string-array name="escolaridad">
+        <item>Primaria</item>
+        <item>Segundaria</item>
+        <item>Universitario</item>
+        <item>Otro</item>
+    </string-array>
 </resources>

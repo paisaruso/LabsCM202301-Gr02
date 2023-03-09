@@ -12,109 +12,169 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
+        <ImageView
+            android:id="@+id/iv_nombre"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edt_nombres"
+            app:layout_constraintBottom_toTopOf="@id/iv_apellido"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/edt_nombres"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_nombre_foreground" />
+
         <EditText
-            android:id="@+id/editTextNombres"
+            android:id="@+id/edt_nombres"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
             android:hint="Ingrese sus nombres"
             android:inputType="textCapWords|textNoSuggestions"
-            android:padding="16dp"
+            android:maxLines="1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/iv_nombre"
+            app:layout_constraintBottom_toTopOf="@id/edt_apellidos"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_nombre"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/iv_apellido"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/edt_apellidos"
+            app:layout_constraintTop_toBottomOf="@id/iv_nombre"
+            app:srcCompat="@mipmap/ic_apellido_foreground" />
+
         <EditText
-            android:id="@+id/editTextApellidos"
+            android:id="@+id/edt_apellidos"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:hint="Ingrese sus apellidos"
             android:inputType="textCapWords|textNoSuggestions"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextNombres" />
+            android:maxLines="1"
+            app:layout_constraintLeft_toRightOf="@+id/iv_apellido"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_nombres" />
+
+        <ImageView
+            android:id="@+id/iv_sexo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_sexo"
+            app:layout_constraintTop_toBottomOf="@+id/iv_apellido"
+            app:srcCompat="@mipmap/ic_sexo_foreground" />
 
         <TextView
-            android:id="@+id/textViewSexo"
+            android:id="@+id/tv_sexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Sexo:"
             android:textSize="16sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/radioButtonHombre"
-            app:layout_constraintEnd_toStartOf="@+id/radioButtonHombre"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/rb_hombre"
+            app:layout_constraintTop_toBottomOf="@+id/edt_apellidos" />
 
         <RadioButton
-            android:id="@+id/radioButtonHombre"
-            android:layout_width="wrap_content"
+            android:id="@+id/rb_hombre"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="124dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:checked="true"
             android:padding="16dp"
             android:text="Hombre"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextFechaNacimiento"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintEnd_toStartOf="@+id/rb_mujer"
+            app:layout_constraintTop_toBottomOf="@+id/edt_apellidos" />
 
         <RadioButton
-            android:id="@+id/radioButtonMujer"
-            android:layout_width="wrap_content"
+            android:id="@+id/rb_mujer"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:checked="false"
             android:padding="16dp"
             android:text="Mujer"
-            app:layout_constraintStart_toEndOf="@+id/radioButtonHombre"
-            app:layout_constraintTop_toBottomOf="@+id/editTextFechaNacimiento"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_apellidos" />
+
+        <ImageView
+            android:id="@+id/iV_calendario"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_fechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sexo"
+            app:srcCompat="@mipmap/ic_calendario_foreground" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_siguiente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="278dp"
-            tools:layout_editor_absoluteY="436dp"/>
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="8dp"
+            android:text="Siquiente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/btn_cambiar" />
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="407dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:entries="@array/escolaridad"
             android:prompt="@string/spinner_hint"
             android:visibility="visible"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="383dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_fechaNacimiento"
+            tools:layout_editor_absoluteX="65dp" />
 
         <EditText
-            android:id="@+id/editTextFechaNacimiento"
-            android:layout_width="269dp"
-            android:layout_height="63dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="16dp"
+            android:id="@+id/tv_fechaNacimiento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:hint="fecha de nacimiento"
             android:inputType="date"
             android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextApellidos" />
+            app:layout_constraintEnd_toStartOf="@+id/btn_cambiar"
+            app:layout_constraintTop_toBottomOf="@+id/rb_hombre" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_cambiar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="298dp"
-            tools:layout_editor_absoluteY="205dp" />
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Cambiar"
+            app:layout_constraintLeft_toRightOf="@id/tv_fechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/rb_mujer" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iV_calendario"
+            app:srcCompat="@mipmap/ic_escolaridad_foreground" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
