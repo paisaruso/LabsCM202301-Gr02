@@ -34,6 +34,7 @@
             android:hint="Ingrese sus nombres"
             android:inputType="textCapWords|textNoSuggestions"
             android:maxLines="1"
+            android:autofillHints=""
             app:layout_constraintBaseline_toBaselineOf="@+id/iv_nombre"
             app:layout_constraintBottom_toTopOf="@id/edt_apellidos"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +60,7 @@
             android:layout_marginTop="8dp"
             android:hint="Ingrese sus apellidos"
             android:inputType="textCapWords|textNoSuggestions"
+            android:autofillHints=""
             android:maxLines="1"
             app:layout_constraintLeft_toRightOf="@+id/iv_apellido"
             app:layout_constraintRight_toRightOf="parent"
@@ -68,9 +70,11 @@
             android:id="@+id/iv_sexo"
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             app:layout_constraintEnd_toStartOf="@+id/tv_sexo"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_apellido"
             app:srcCompat="@mipmap/ic_sexo_foreground" />
 
@@ -113,9 +117,11 @@
             android:id="@+id/iV_calendario"
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toStartOf="@+id/tv_fechaNacimiento"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_sexo"
             app:srcCompat="@mipmap/ic_calendario_foreground" />
 
@@ -123,28 +129,29 @@
             android:id="@+id/btn_siguiente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="32dp"
             android:text="Siquiente"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/spinner"
-            app:layout_constraintTop_toBottomOf="@+id/btn_cambiar" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="200dp"
             android:entries="@array/escolaridad"
             android:prompt="@string/spinner_hint"
             android:visibility="visible"
-            app:layout_constraintTop_toBottomOf="@+id/tv_fechaNacimiento"
-            tools:layout_editor_absoluteX="65dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_escolaridad"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fechaNacimiento" />
 
-        <EditText
+        <TextView
             android:id="@+id/tv_fechaNacimiento"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -152,29 +159,27 @@
             android:inputType="date"
             android:padding="16dp"
             app:layout_constraintEnd_toStartOf="@+id/btn_cambiar"
-            app:layout_constraintTop_toBottomOf="@+id/rb_hombre" />
+            app:layout_constraintTop_toBottomOf="@+id/rb_hombre"  />
+
+        <ImageView
+            android:id="@+id/iv_escolaridad"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iV_calendario"
+            app:srcCompat="@mipmap/ic_escolaridad_foreground" />
 
         <Button
             android:id="@+id/btn_cambiar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:text="Cambiar"
+            android:text="@string/button_text"
             app:layout_constraintLeft_toRightOf="@id/tv_fechaNacimiento"
             app:layout_constraintTop_toBottomOf="@+id/rb_mujer" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="46dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toStartOf="@+id/spinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iV_calendario"
-            app:srcCompat="@mipmap/ic_escolaridad_foreground" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
