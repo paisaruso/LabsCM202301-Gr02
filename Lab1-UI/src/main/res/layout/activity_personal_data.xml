@@ -72,7 +72,7 @@
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="110dp"
             app:layout_constraintEnd_toStartOf="@+id/tv_sexo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_apellido"
@@ -82,36 +82,42 @@
             android:id="@+id/tv_sexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
             android:text="Sexo:"
             android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/rb_hombre"
+            app:layout_constraintEnd_toStartOf="@+id/rg_sexo"
+            app:layout_constraintStart_toEndOf="@+id/iv_sexo"
             app:layout_constraintTop_toBottomOf="@+id/edt_apellidos" />
 
-        <RadioButton
-            android:id="@+id/rb_hombre"
+        <RadioGroup
+            android:id="@+id/rg_sexo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:checked="true"
-            android:padding="16dp"
-            android:text="Hombre"
-            app:layout_constraintEnd_toStartOf="@+id/rb_mujer"
-            app:layout_constraintTop_toBottomOf="@+id/edt_apellidos" />
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/tv_sexo"
+            app:layout_constraintTop_toBottomOf="@+id/edt_apellidos">
 
-        <RadioButton
-            android:id="@+id/rb_mujer"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:checked="false"
-            android:padding="16dp"
-            android:text="Mujer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_apellidos" />
+            <RadioButton
+                android:id="@+id/rb_hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Hombre" />
+
+            <RadioButton
+                android:id="@+id/rb_mujer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Mujer" />
+
+        </RadioGroup>
+
 
         <ImageView
             android:id="@+id/iV_calendario"
@@ -159,7 +165,7 @@
             android:inputType="date"
             android:padding="16dp"
             app:layout_constraintEnd_toStartOf="@+id/btn_cambiar"
-            app:layout_constraintTop_toBottomOf="@+id/rb_hombre"  />
+            app:layout_constraintTop_toBottomOf="@+id/rg_sexo"  />
 
         <ImageView
             android:id="@+id/iv_escolaridad"
@@ -179,7 +185,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/button_text"
             app:layout_constraintLeft_toRightOf="@id/tv_fechaNacimiento"
-            app:layout_constraintTop_toBottomOf="@+id/rb_mujer" />
+            app:layout_constraintTop_toBottomOf="@+id/rg_sexo" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
