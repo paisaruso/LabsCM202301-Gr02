@@ -139,10 +139,10 @@
             android:text="Siquiente"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/spn_escolaridad" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spn_escolaridad"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

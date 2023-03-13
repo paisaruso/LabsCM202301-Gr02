@@ -3,6 +3,7 @@
     <string name="spinner_hint">Grado de escolaridad</string>
     <string name="button_text">CAMBIAR\n fecha</string>
     <string-array name="escolaridad">
+        <item></item>
         <item>Primaria</item>
         <item>Segundaria</item>
         <item>Universitario</item>
