@@ -20,4 +20,5 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+    private val idiomas = arrayOf("Español", "Inglés", "Francés")
 }

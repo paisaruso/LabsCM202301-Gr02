@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ACTIVITÉ</string>
+    <string name="button1_datos">Entrer les données</string>
+    <string name="edt_nombres">Entrer les noms</string>
+    <string name="edt_apellidos">Entrer les prénoms</string>
+    <string name="tv_sexo">Sexe</string>
+    <string name="rgb_hombre">Homme</string>
+    <string name="rgb_mujer">Femme</string>
+    <string name="tv_fechaNacimientor">Date de naissance</string>
+    <string name="toas_escolaridad">Vous devez sélectionner un niveau d éducation</string>
+    <string name="button2_siquiente">SUIVANT</string>
+    <string name="TextView_datos">NOUS AVONS BESOIN DE VOS DONNÉES</string>
+    <string name="spinner_hint">Niveau d éducation</string>
+    <string name="button_text">CHANGER\n la date</string>
+    <string-array name="escolaridad">
+        <item>Sélectionner</item>
+        <item>École primaire</item>
+        <item>Collège</item>
+        <item>Lycée</item>
+        <item>Université</item>
+        <item>Autre</item>
+    </string-array>
+</resources>
+

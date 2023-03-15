@@ -31,10 +31,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:hint="Ingrese sus nombres"
+            android:autofillHints=""
+            android:hint="@string/edt_nombres"
             android:inputType="textCapWords|textNoSuggestions"
             android:maxLines="1"
-            android:autofillHints=""
             app:layout_constraintBaseline_toBaselineOf="@+id/iv_nombre"
             app:layout_constraintBottom_toTopOf="@id/edt_apellidos"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,9 +58,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:hint="Ingrese sus apellidos"
-            android:inputType="textCapWords|textNoSuggestions"
             android:autofillHints=""
+            android:hint="@string/edt_apellidos"
+            android:inputType="textCapWords|textNoSuggestions"
             android:maxLines="1"
             app:layout_constraintLeft_toRightOf="@+id/iv_apellido"
             app:layout_constraintRight_toRightOf="parent"
@@ -85,7 +85,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
-            android:text="Sexo:"
+            android:text="@string/tv_sexo"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/rg_sexo"
             app:layout_constraintStart_toEndOf="@+id/iv_sexo"
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="Hombre" />
+                android:text="@string/rgb_hombre" />
 
             <RadioButton
                 android:id="@+id/rb_mujer"
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="false"
-                android:text="Mujer" />
+                android:text="@string/rgb_mujer" />
 
         </RadioGroup>
 
@@ -136,14 +136,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Siquiente"
+            android:text="@string/button2_siquiente"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spn_escolaridad" />
 
         <Spinner
             android:id="@+id/spn_escolaridad"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
@@ -161,11 +161,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:hint="fecha de nacimiento"
+            android:hint="@string/tv_fechaNacimientor"
             android:inputType="date"
             android:padding="16dp"
             app:layout_constraintEnd_toStartOf="@+id/btn_cambiar"
-            app:layout_constraintTop_toBottomOf="@+id/rg_sexo"  />
+            app:layout_constraintTop_toBottomOf="@+id/rg_sexo" />
 
         <ImageView
             android:id="@+id/iv_escolaridad"

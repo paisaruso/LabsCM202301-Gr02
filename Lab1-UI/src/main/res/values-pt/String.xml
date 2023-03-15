@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ATIVIDADE</string>
+    <string name="button1_datos">Inserir dados</string>
+    <string name="edt_nombres">Inserir nomes</string>
+    <string name="edt_apellidos">Inserir sobrenomes</string>
+    <string name="tv_sexo">Sexo</string>
+    <string name="rgb_hombre">Masculino</string>
+    <string name="rgb_mujer">Feminino</string>
+    <string name="tv_fechaNacimientor">Data de nascimento</string>
+    <string name="toas_escolaridad">Você deve selecionar um nível de escolaridade</string>
+    <string name="button2_siquiente">PRÓXIMO</string>
+    <string name="TextView_datos">PRECISAMOS DOS SEUS DADOS</string>
+    <string name="spinner_hint">Nível de escolaridade</string>
+    <string name="button_text">ALTERAR\n data</string>
+    <string-array name="escolaridad">
+        <item>Selecionar</item>
+        <item>Ensino Fundamental</item>
+        <item>Ensino Médio</item>
+        <item>Ensino Superior</item>
+        <item>Outro</item>
+    </string-array>
+</resources>

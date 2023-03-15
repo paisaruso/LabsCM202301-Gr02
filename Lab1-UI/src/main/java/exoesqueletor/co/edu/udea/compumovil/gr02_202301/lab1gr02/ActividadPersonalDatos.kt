@@ -1,6 +1,7 @@
 package exoesqueletor.co.edu.udea.compumovil.gr02_202301.lab1gr02
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -44,18 +45,28 @@ class ActividadPersonalDatos : AppCompatActivity(), DatePickerDialog.OnDateSetLi
             val nombre = edtNombres.text.toString().trim()
             val apellido = edtApellidos.text.toString().trim()
             val FechaNacimiento = tvFechaNacimiento.text.toString().trim()
+            val msmNombre= getString(R.string.toas_nombre)
+            val msmApellido = getString(R.string.toas_apellido)
+            val msmFechaNacimiento = getString(R.string.toas_fechaNacimiento)
+            val msmEscolaridad = getString(R.string.toas_escolaridad)
+            val msmSiguiente = getString(R.string.toas_siguiente)
 
-            if (seleccion.isEmpty()) {
-                Toast.makeText(this, "Debe seleccionar un valor en el spinner", Toast.LENGTH_SHORT).show()
+
+
+            if (seleccion.toString()=="Seleccione") {
+                Toast.makeText(this, msmEscolaridad, Toast.LENGTH_SHORT).show()
             } else if (nombre.isEmpty()) {
-                Toast.makeText(this, "Debe ingresar un nombre en el campo", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, msmNombre, Toast.LENGTH_SHORT).show()
             }else if(apellido.isEmpty()){
-                Toast.makeText(this, "Debe ingresar un apellido en el campo", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, msmApellido, Toast.LENGTH_SHORT).show()
             }else if(FechaNacimiento.isEmpty()){
-                Toast.makeText(this, "Debe ingresar una fecha en el campo", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, msmFechaNacimiento, Toast.LENGTH_SHORT).show()
             }else{
                 //llamremos la tercera activity
-                Toast.makeText(this, "4 campos validados", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, msmSiguiente, Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ContactDataActivity ::class.java)
+                startActivity(intent)
+
             }
         }
 
