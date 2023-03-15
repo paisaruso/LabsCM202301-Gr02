@@ -63,10 +63,16 @@ class ActividadPersonalDatos : AppCompatActivity(), DatePickerDialog.OnDateSetLi
                 Toast.makeText(this, msmFechaNacimiento, Toast.LENGTH_SHORT).show()
             }else{
                 //llamremos la tercera activity
+<<<<<<< HEAD
                 Toast.makeText(this, msmSiguiente, Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, ContactDataActivity ::class.java)
                 startActivity(intent)
 
+=======
+                Toast.makeText(this, "4 campos validados", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ContactDataActivity ::class.java)
+                startActivity(intent)
+>>>>>>> 606a5c262b1ba73752667e0d772a22d3faf87289
             }
         }
 
