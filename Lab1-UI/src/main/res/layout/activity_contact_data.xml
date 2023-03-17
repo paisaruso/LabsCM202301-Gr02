@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_correo"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
@@ -49,8 +49,53 @@
         android:layout_marginTop="8dp"
         android:hint="Ingrese su texto aquí"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/iv_correo"
         app:layout_constraintTop_toBottomOf="@+id/edt_telefono" />
 
+    <ImageView
+        android:id="@+id/iv_pais"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_correo"
+        app:srcCompat="@mipmap/ic_pais_foreground" />
+
+    <Spinner
+        android:id="@+id/spn_paises"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@android:color/black"
+        android:hint="Seleccione un país"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_pais"
+        app:layout_constraintTop_toBottomOf="@+id/edt_correo" />
+
+    <ImageView
+        android:id="@+id/iv_ciudad"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pais"
+        app:srcCompat="@mipmap/ic_ciudad_foreground" />
+
+    <Spinner
+        android:id="@+id/spn_ciudades"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:clickable="false"
+        android:textColorHint="@android:color/darker_gray"
+        android:hint="Seleccione una ciudad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_ciudad"
+        app:layout_constraintTop_toBottomOf="@+id/spn_paises" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

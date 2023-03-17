@@ -8,7 +8,6 @@
     <string name="rgb_hombre">Homme</string>
     <string name="rgb_mujer">Femme</string>
     <string name="tv_fechaNacimientor">Date de naissance</string>
-    <string name="toas_escolaridad">Vous devez sélectionner un niveau d éducation</string>
     <string name="button2_siquiente">SUIVANT</string>
     <string name="TextView_datos">NOUS AVONS BESOIN DE VOS DONNÉES</string>
     <string name="spinner_hint">Niveau d éducation</string>

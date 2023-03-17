@@ -9,11 +9,6 @@
     <string name="rgb_hombre">Hombre</string>
     <string name="rgb_mujer">Mujer</string>
     <string name="tv_fechaNacimientor">Fecha de nacimiento</string>
-    <string name="toas_nombre">Debe ingresar nombre</string>
-    <string name="toas_apellido">Debe ingresar apellido</string>
-    <string name="toas_fechaNacimiento">Debe seleccionar fecha de nacimiento</string>
-    <string name="toas_escolaridad">Debe seleccionar escolaridad</string>
-    <string name="toas_siguiente">Datos completos</string>
     <string name="button2_siquiente">SIGUIENTE</string>
     <string name="TextView_datos">REQUERIMOS SUS DATOS</string>
     <string name="spinner_hint">Grado de escolaridad</string>
