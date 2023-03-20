@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:hint="Ingrese su texto aquí"
+        android:hint="@string/edt_telefono"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_telefono"
         app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:hint="Ingrese su texto aquí"
+        android:hint="@string/edt_correo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_correo"
         app:layout_constraintTop_toBottomOf="@+id/edt_telefono" />
@@ -68,8 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textColorHint="@android:color/black"
         android:hint="Seleccione un país"
+        android:textColorHint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/iv_pais"
@@ -92,10 +93,63 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:clickable="false"
-        android:textColorHint="@android:color/darker_gray"
         android:hint="Seleccione una ciudad"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_ciudad"
         app:layout_constraintTop_toBottomOf="@+id/spn_paises" />
+
+    <Button
+        android:id="@+id/btn_validarDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_validarDatos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_direccion" />
+
+    <TextView
+        android:id="@+id/tv_todoDatos"
+        android:layout_width="341dp"
+        android:layout_height="306dp"
+        android:text="@string/edt_datosPersonales"
+        app:layout_constraintBottom_toTopOf="@+id/btn_imprimir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_validarDatos" />
+
+    <Button
+        android:id="@+id/btn_imprimir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/btn_imprimir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="102dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_todoDatos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ciudad"
+        app:srcCompat="@mipmap/ic_direccion_foreground" />
+
+    <EditText
+        android:id="@+id/edt_direccion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/edt_direccion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/spn_ciudades" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

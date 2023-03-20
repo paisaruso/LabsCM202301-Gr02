@@ -32,6 +32,7 @@ class ActividadPersonalDatos : AppCompatActivity(), DatePickerDialog.OnDateSetLi
         edtApellidos = findViewById<EditText>(R.id.edt_apellidos)
 
 
+
         btnCambiar.setOnClickListener {
             showDatePickerDialog()
         }
@@ -55,9 +56,27 @@ class ActividadPersonalDatos : AppCompatActivity(), DatePickerDialog.OnDateSetLi
             }else if(FechaNacimiento.isEmpty()){
                 Toast.makeText(this, "Debe ingresar una fecha en el campo", Toast.LENGTH_SHORT).show()
             }else{
+                // Código para obtener los datos ingresados por el usuario en cada componente
+                val nombre = edtNombres.text.toString()
+                val apellidos = edtApellidos.text.toString()
+                val rgSexo = findViewById<RadioGroup>(R.id.rg_sexo)
+                val selectedRadioButtonId = rgSexo.checkedRadioButtonId
+                var genero = ""
+                if(selectedRadioButtonId == R.id.rb_hombre) {
+                    genero = "Hombre"
+                } else if(selectedRadioButtonId == R.id.rb_mujer) {
+                    genero = "Mujer"
+                }
+                val fechaNacimiento = tvFechaNacimiento.text.toString()
+                val escolaridad = spnEscolaridad.selectedItem.toString()
                 //llamremos la tercera activity
                 Toast.makeText(this, "4 campos validados", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, ContactDataActivity ::class.java)
+                intent.putExtra("nombre", nombre)
+                intent.putExtra("apellidos", apellidos)
+                intent.putExtra("genero", genero)
+                intent.putExtra("fechaNacimiento", fechaNacimiento)
+                intent.putExtra("escolaridad", escolaridad)
                 startActivity(intent)
 
             }

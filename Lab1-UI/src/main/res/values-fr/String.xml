@@ -12,6 +12,14 @@
     <string name="TextView_datos">NOUS AVONS BESOIN DE VOS DONNÉES</string>
     <string name="spinner_hint">Niveau d éducation</string>
     <string name="button_text">CHANGER\n la date</string>
+
+    <string name="edt_telefono"> Entrez le numéro de téléphone </string>
+    <string name="edt_correo"> Entrez votre courriel </string>
+    <string name="edt_direccion"> Entrez votre adresse </string>
+    <string name="btn_validarDatos"> Valider les données </string>
+    <string name="btn_imprimir"> Imprimer </string>
+    <string name="edt_datosPersonales"> Données personales </string>
+
     <string-array name="escolaridad">
         <item>Sélectionner</item>
         <item>École primaire</item>

@@ -13,6 +13,14 @@
     <string name="TextView_datos">REQUERIMOS SUS DATOS</string>
     <string name="spinner_hint">Grado de escolaridad</string>
     <string name="button_text">CAMBIAR\n fecha</string>
+
+    <string name="edt_telefono">Ingrese número telefonico</string>
+    <string name="edt_correo">Ingrese su correo</string>
+    <string name="edt_direccion">Ingrese du dirección</string>
+    <string name="btn_validarDatos">Validar Datos</string>
+    <string name="btn_imprimir">Imprimir</string>
+    <string name="edt_datosPersonales">                          Datos Personales</string>
+
     <string-array name="escolaridad">
         <item>Seleccione</item>
         <item>Primaria</item>
